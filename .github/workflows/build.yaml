@@ -12,26 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y texlive-full
+      - name: Build PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
 
-      - name: Compile LaTeX
-        run: pdflatex main.tex
-
-      - name: Rename PDF output with GitHub username
+      - name: Rename PDF
         run: mv main.pdf ${{ github.repository_owner }}.pdf
 
-      - name: Upload PDF artifact
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: pdf-output
           path: ${{ github.repository_owner }}.pdf
-
-      - name: Commit PDF to repo
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add main.pdf
-          git commit -m "Auto update PDF"
-          git push
-
