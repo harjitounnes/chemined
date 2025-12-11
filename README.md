@@ -1,12 +1,4 @@
-# LaTeX Auto-PDF Template
-
-Template ini memungkinkan Anda membuat laporan menggunakan LaTeX dan otomatis menghasilkan PDF.
-
-## ✔ Fitur
-- Otomatis membuat PDF lewat GitHub Actions
-- PDF otomatis dinamai sesuai username GitHub
-- Bisa langsung compie di GitHub Codespaces
-- Cocok untuk tugas kuliah, laporan praktikum, skripsi, dll.
+# Template Artikel Chemined
 
 ## 📌 Cara pakai
 
