@@ -13,8 +13,6 @@ Template ini memungkinkan Anda membuat laporan menggunakan LaTeX dan otomatis me
 1. **Fork repository ini**
 2. Edit file `main.tex`
 3. Commit & push
-4. Buka tab **Actions**
-5. Download PDF Anda dari bagian **Artifacts**
 
 ## 🖥 Compile memakai Codespace
 - Buka repo → Code → Open with Codespaces
