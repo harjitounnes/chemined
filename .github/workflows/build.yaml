@@ -26,3 +26,12 @@ jobs:
         with:
           name: pdf-output
           path: ${{ github.repository_owner }}.pdf
+
+      - name: Commit PDF to repo
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add main.pdf
+          git commit -m "Auto update PDF"
+          git push
+
